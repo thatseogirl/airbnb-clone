@@ -1,0 +1,141 @@
+.flexdropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 400px;
+  height: 45px;
+}
+
+.navigationscroll {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  width: 1440px;
+  height: 50px;
+  padding: 40px;
+}
+.flexitems {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+.header__icon {
+  width: 120px;
+}
+.box {
+  height: 16px;
+  width: 16px;
+  fill: currentcolor;
+  margin-left: 20px;
+}
+
+.dropdown-toggle::after {
+  content: none !important;
+}
+.search {
+  margin-left: 120px;
+  background: #ffffff;
+  width: 300px;
+  height: 45px;
+  border-radius: 20px !important;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.searchicon {
+  height: 35px;
+  width: 35px;
+  background-color: #ff385d;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  margin-left: 120px;
+}
+.yoursearch {
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222222;
+  margin-left: 15px;
+}
+.text {
+  margin-top: 5px;
+}
+.icon {
+  margin: 8px;
+}
+li {
+  list-style: none;
+}
+.brand {
+  color: #ff385d !important;
+  font-size: 25px;
+  font-weight: 600;
+  position: relative;
+  top: 5px;
+}
+.logo {
+  fill: #ff385d;
+  text-decoration: none;
+  width: 40px;
+}
+.hometoggle {
+  margin-left: 45px;
+}
+.hosting {
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  color: #4b4b4b;
+  font-weight: 600;
+  position: relative;
+  right: 25px;
+  top: 7px;
+}
+.hosting:hover {
+  color: #4b4b4b;
+}
+
+.signin {
+  display: flex;
+  justify-content: space-around;
+  background: #ffffff;
+  width: 75px;
+  height: 38px;
+  border-radius: 20px !important;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.signin:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.avatar {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  fill: currentcolor;
+  position: relative;
+  right: 10px;
+  top: 5px;
+}
+.menu {
+  position: relative;
+  right: 20px;
+  top: 4px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 990px) {
+  .search {
+    margin-left: 0;
+  }
+  .brand {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .flexitems {
+    display: none;
+  }
+}

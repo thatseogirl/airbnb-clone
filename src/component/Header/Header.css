@@ -1,0 +1,94 @@
+.header {
+  padding-top: 220px;
+  background-color: black;
+  height: 900px;
+}
+
+.refugees {
+  background-color: #ff385d;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  width: 88%;
+  height: 350px;
+  margin: auto;
+}
+.refugeeswrapper {
+  color: #ffffff;
+  padding: 110px;
+}
+.refugeestext {
+  font-size: 48px;
+  font-weight: 600;
+}
+.refugeesbtn {
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #ff385d;
+  color: #ffffff;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 120px;
+  padding: 10px;
+}
+.booking {
+  padding: 80px;
+  margin: 80px;
+  background-image: url("https://a0.muscache.com/im/pictures/23b047cd-19c9-42c0-a83b-2f4f6f25717b.jpg?im_w=1200");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 650px;
+  border-radius: 15px 15px;
+}
+
+.centered {
+  margin-top: 360px;
+  text-align: center;
+}
+
+.centeredtext {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 600;
+}
+.centeredbtn {
+  border-radius: 50px;
+  padding: 10px;
+  width: 160px;
+  height: 60px;
+  color: #9b018c;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 10px;
+  border: 1px solid white;
+}
+.mobile {
+  display: none;
+}
+@media screen and (max-width: 1025px) {
+  .centered {
+    margin-top: 170px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .refugeestext {
+    font-size: 30px;
+  }
+  .booking {
+    background-size: 950px;
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .centeredtext {
+    font-size: 35px;
+  }
+  .booking {
+    width: 90%;
+    height: 600px;
+    margin: 30px auto;
+  }
+  .refugeeswrapper {
+    padding: 70px;
+  }
+}

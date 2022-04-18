@@ -1,0 +1,46 @@
+footer {
+  padding-top: 10px;
+  background-color: #f7f7f7;
+}
+.top-footer {
+  padding: 50px;
+  display: flex;
+  gap: 60px;
+  padding-bottom: 20px;
+}
+.rightalign {
+  text-align: left;
+  line-height: 2.5em;
+}
+.bottom-footer {
+  padding-left: 50px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+hr {
+  width: 88%;
+  margin: auto;
+}
+.copyright,
+.socialmedia {
+  display: flex;
+  gap: 20px;
+}
+.socialmedia {
+  margin-right: 90px;
+}
+.facebook {
+  margin-left: 30px;
+}
+@media screen and (max-width: 990px) {
+  .top-footer,
+  .bottom-footer {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .bottom-footer {
+    gap: 20px;
+  }
+}
