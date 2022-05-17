@@ -32,6 +32,9 @@
   fill: currentcolor;
   margin-left: 20px;
 }
+.scrolbox{
+  fill: #ffffff;
+}
 
 .dropdown-toggle::after {
   content: none !important;
@@ -76,10 +79,16 @@ li {
   position: relative;
   top: 5px;
 }
+.scrolbrand, .scrolhost{
+  color: #ffffff !important;
+}
 .logo {
   fill: #ff385d;
   text-decoration: none;
   width: 40px;
+}
+.scrologo{
+  fill: #ffffff;
 }
 .hometoggle {
   margin-left: 45px;
@@ -120,11 +129,17 @@ li {
   right: 10px;
   top: 5px;
 }
+.scrolavatar{
+  fill: black;
+}
 .menu {
   position: relative;
   right: 20px;
   top: 4px;
   font-size: 20px;
+}
+.scrolmenu{
+  color: black;
 }
 
 @media screen and (max-width: 990px) {

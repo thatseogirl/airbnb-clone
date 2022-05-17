@@ -1,40 +1,63 @@
-import React from 'react'
-import { NavDropdown } from 'react-bootstrap';
+import React, { useState } from "react";
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css"; // theme css file
+import { DateRangePicker } from "react-date-range";
+import { addDays } from "date-fns";
+
+import { BsSearch } from "react-icons/bs";
+import "./Dropdown.css";
 
 export default function Dropdown() {
+  const [state, setState] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+  const handleClick = () => {
+    console.log("pick");
+    <DateRangePicker
+      onChange={(item) => setState([item.selection])}
+      showSelectionPreview={true}
+      moveRangeOnFirstSelection={false}
+      months={2}
+      ranges={state}
+      direction="horizontal"
+    />;
+  };
+
   return (
-    <div className="griddropdown">
-      <div>
-        <NavDropdown
-          id="nav-dropdown-dark-example"
-          title="Places to stay"
-        >
-          <NavDropdown.Item href="#action/3.1">Places to Stay</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Experiences</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">
-            Online Experiences
-          </NavDropdown.Item>
-        </NavDropdown>
+    <div className="flexdropdown">
+      <div className="accomodation">
+        <p className="titletag">Accomodations</p>
+        <p className="titletag">Experiences</p>
+        <p className="titletag">Online Experiences</p>
       </div>
 
-      <div>
-        <NavDropdown id="nav-dropdown-dark-example" title="Places to stay">
-          <NavDropdown.Item href="#action/3.1">Places to Stay</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2">Experiences</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.3">
-            Online Experiences
-          </NavDropdown.Item>
-        </NavDropdown>
-      </div>
-
-      <div>
-        <NavDropdown
-          id="nav-dropdown-dark-example"
-          title="Online Experiences"
-          menuVariant="dark"
-        >
-        </NavDropdown>
-      </div>
+      <section className="calender">
+        <div className="topandbottom">
+          <p className="toptext">Location</p>
+          <p className="bottomtext">Where are you going?</p>
+        </div>
+        <div className="topandbottom">
+          <p className="toptext">Checking in</p>
+          <p className="bottomtext">When?</p>
+        </div>
+        <div className="topandbottom">
+          <p onClick={handleClick} className="toptext">
+            Checking out
+          </p>
+          <p className="bottomtext">When?</p>
+        </div>
+        <div className="topandbottom">
+          <p className="toptext">Guests</p>
+          <p className="bottomtext">Who?</p>
+        </div>
+        <div className="dropicon">
+          <BsSearch className="bssearch" />
+        </div>
+      </section>
     </div>
-  )
+  );
 }
