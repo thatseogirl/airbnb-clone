@@ -7,7 +7,7 @@
   height: 50px;
   padding: 40px;
 }
-#navScroll{
+#navScroll {
   position: fixed;
   display: none;
   justify-content: space-between;
@@ -32,7 +32,7 @@
   fill: currentcolor;
   margin-left: 20px;
 }
-.scrolbox{
+.scrolbox {
   fill: #ffffff;
 }
 
@@ -79,7 +79,8 @@ li {
   position: relative;
   top: 5px;
 }
-.scrolbrand, .scrolhost{
+.scrolbrand,
+.scrolhost {
   color: #ffffff !important;
 }
 .logo {
@@ -87,7 +88,7 @@ li {
   text-decoration: none;
   width: 40px;
 }
-.scrologo{
+.scrologo {
   fill: #ffffff;
 }
 .hometoggle {
@@ -129,7 +130,7 @@ li {
   right: 10px;
   top: 5px;
 }
-.scrolavatar{
+.scrolavatar {
   fill: black;
 }
 .menu {
@@ -138,14 +139,17 @@ li {
   top: 4px;
   font-size: 20px;
 }
-.scrolmenu{
+.scrolmenu {
   color: black;
 }
 
 @media screen and (max-width: 990px) {
-  .navigation {
+  #scrollDown {
     height: 130px;
     padding: 10px;
+  }
+  .search {
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 600px) {

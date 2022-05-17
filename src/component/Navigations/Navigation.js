@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Dropdown from "./Dropdown";
 import "./Navigation.css";
 
-
 import { Navbar, Nav, NavDropdown, NavbarBrand } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
@@ -12,31 +11,30 @@ import { GiHamburgerMenu } from "react-icons/gi";
 export default function Navigation() {
   const [navigation, setNavigation] = useState(false);
   useEffect(() => {
-  const onScroll = () => {
-    let scrollTop = document.getElementById('navScroll');
-    let scrollDown = document.getElementById('scrollDown');
-    if (window.scrollY === 0) {
-      scrollTop.style.display = "flex";
-      setNavigation(true);
-    } else if (window.scrollY >= 20) {
-      scrollDown.style.display = "flex";
-      setNavigation(true);
-    } else{
-      scrollTop.style.display = "none";
-    }
-  }
+    const onScroll = () => {
+      let scrollTop = document.getElementById("navScroll");
+      let scrollDown = document.getElementById("scrollDown");
+      if (window.scrollY === 0) {
+        scrollTop.style.display = "flex";
+        setNavigation(true);
+      } else if (window.scrollY >= 20) {
+        scrollDown.style.display = "flex";
+        setNavigation(true);
+      } else {
+        scrollTop.style.display = "none";
+      }
+      if (window.screen.width <= 1024) {
+        scrollTop.style.display = "none";
+      }
+    };
     window.addEventListener("scroll", onScroll);
-    
+
     return () => window.removeEventListener("scroll", onScroll);
   }, [navigation]);
 
   return (
     <>
-      <Navbar
-        className= "navigation"
-        id="scrollDown"
-        expand="lg"
-      >
+      <Navbar className="navigation" id="scrollDown" expand="lg">
         <div className="mobile ">
           <BsSearch className="iconmobile" />
           <p className="textmobile">Where are you going? </p>
@@ -69,8 +67,7 @@ export default function Navigation() {
                   </div>
                 </div>
               }
-            >
-            </NavDropdown>
+            ></NavDropdown>
           </Nav>
         </div>
         <div className="flexitems">
@@ -166,7 +163,6 @@ export default function Navigation() {
           </ul>
         </div>
       </Navbar>
-     
     </>
   );
 }
